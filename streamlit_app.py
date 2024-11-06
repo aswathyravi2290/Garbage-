@@ -2,9 +2,10 @@ import streamlit as st
 import tensorflow as tf
 from PIL import Image, ImageOps
 import numpy as np
-
+import cv2
+from keras.models import load_model
 # Load the model
-model = tf.keras.models.load_model('keras_model.h5')
+model = load_model('keras_model.h5', compile = False)
 
 # Load the labels
 labels = ["Paper", "Glass"]
