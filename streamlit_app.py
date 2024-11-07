@@ -7,7 +7,7 @@ import numpy as np
 model = tf.keras.models.load_model('keras_model.h5')
 
 # Load labels
-with open('/app/labels.txt', 'r') as file:
+with open('labels.txt', 'r') as file:
     labels = [line.strip() for line in file]
 
 # Streamlit app layout
